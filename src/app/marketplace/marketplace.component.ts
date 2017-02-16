@@ -4,7 +4,6 @@ import { Router } from '@angular/router';
 import { AlbumService } from '../album.service';
 import { AngularFire, FirebaseListObservable } from 'angularfire2';
 
-
 @Component({
   selector: 'app-marketplace',
   templateUrl: './marketplace.component.html',
