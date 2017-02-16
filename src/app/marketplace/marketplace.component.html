@@ -3,9 +3,8 @@
 	<div class="panel-body">
 		<h3 (click)="goToDetailPage(album)"><em>{{album.title}}</em> by {{album.artist}}</h3>
 			{{album.$key}}
-		<div *ngIf="currentRoute === '/admin'">
 			{{album.description}}
-
+		<div *ngIf="currentRoute === '/admin'">
 			<hr>
 		<app-edit-album [selectedAlbum]="album"></app-edit-album>
 		</div>
