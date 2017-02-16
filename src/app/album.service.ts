@@ -5,6 +5,16 @@ import { AngularFire, FirebaseListObservable } from 'angularfire2';
 
 @Injectable()
 export class AlbumService {
+//*******How To Inject a Service**********
+
+// Import the AlbumService at the top of the file.
+
+// Add a providers property to the component's annotation.
+
+// Register AlbumService in the providers array.
+
+// Declare a new instance of AlbumService in the constructor.
+
 	albums: FirebaseListObservable<any[]>;
 
   constructor(private angularFire: AngularFire) {
