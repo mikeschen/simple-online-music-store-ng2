@@ -1,8 +1,8 @@
-<h2>Marketplace</h2>
+<h2>My Favorites</h2>
 <div *ngFor="let album of albums | async" class="panel panel-default">
 	<div class="panel-body">
 		<h3 (click)="goToDetailPage(album)"><em>{{album.title}}</em> by {{album.artist}}</h3>
-			{{album.$key}}
+<!-- 			{{album.$key}} -->
 			{{album.description}}
 		<div *ngIf="currentRoute === '/admin'">
 			<hr>
