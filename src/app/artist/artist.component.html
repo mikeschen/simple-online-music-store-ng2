@@ -1,9 +1,16 @@
-<div>
-  <label>Artist Name:</label>
-  <br>
-  <input #newName>
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">Add Artist to Favorites</h3>
+    </div>
+    <div class="panel-body">
+        <div>
+          <label>Artist Name:</label>
+          <br>
+          <input #newName>
+        </div>
+        <button class = "btn btn-warning" (click)="searchArtist(newName.value)">Find</button>
+    </div>
 </div>
-<button class = "btn btn-warning" (click)="searchArtist(newName.value)">Find</button>
 <div *ngIf="searchRes">
     <div *ngFor="let res of searchRes">
         <div class="row">
