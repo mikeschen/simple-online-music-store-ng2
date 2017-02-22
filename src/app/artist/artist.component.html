@@ -11,8 +11,10 @@
         <button class = "btn btn-warning" (click)="searchArtist(newName.value)">Find</button>
     </div>
 </div>
+
 <div *ngIf="searchRes">
-    <div *ngFor="let res of searchRes">
+<!--     {{getArtistById(searchRes[0].id)}} -->
+    <div *ngFor="let res of searchRes">  
         <div class="row">
             <div class="col-md-12">
                 <div class="search-res well">
@@ -21,7 +23,7 @@
                         <strong>Genres: </strong>
                         <span *ngFor="let genre of res.genres">{{genre}}, </span>
                         <a href="{{res.href}}">Link</a>
-                        <button (click)="getArtistById(res.id)">More Info</button>
+                        <button (click)="getArtistById(res.id)">List Albums</button>
                     </div>
                 </div>
             </div>
