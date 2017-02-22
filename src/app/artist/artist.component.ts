@@ -13,6 +13,7 @@ import { AlbumService } from '../album.service';
 })
 export class ArtistComponent {
 	 searchRes: Artist[];
+   albumRes: Artist[];
 
   constructor(private spotify: Spotify, private albumService: AlbumService) { }
 
@@ -21,6 +22,13 @@ export class ArtistComponent {
   	 .subscribe(res => {
      		this.searchRes = res.artists.items;
      })
+  }
+
+  getArtistById(id: string) {
+    this.spotify.getArtistById(id)
+      .subscribe(res => {
+        this.albumRes = res.items;
+      })
   }
 
   submitArtist(title: string, artist: string, description: string) {
