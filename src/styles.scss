@@ -1,10 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
-$pink: #c8398f;
+$pink: #d13877;
+$darkpurple: #7f25c1;
 $lightgray: #efefef;
+$purple: #7c25f8;
+$black: #232323;
+$white: #ffffff;
+$green: #4e9583;
 
 html {
 	background: url(ana.jpg) no-repeat center center fixed; 
   background-size: cover;
+  h1 {
+    color: $purple;
+  }
+}
+
+.panel {
+  color: $white;
+  background: red; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left top, $pink, $darkpurple); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, $pink, $darkpurple); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, $pink, $darkpurple); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, $pink, $darkpurple); /* Standard syntax */
+}
+
+input {
+  color: $black !important;
 }
 
 .footer {

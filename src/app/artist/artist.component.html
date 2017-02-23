@@ -21,7 +21,7 @@
                     <h4><a (click)="submitArtist(res.name, res.name, res.name)">{{res.name}}</a></h4>
                     <div>
                         <strong>Genres: </strong>
-                        <span *ngFor="let genre of res.genres">{{genre}}, </span>
+                        <span *ngFor="let genre of res.genres">{{genre}} </span>
                         <button type="button" class="btn btn-success" (click)="getArtistById(res.id)">List Albums</button>
                     </div>
                 </div>
