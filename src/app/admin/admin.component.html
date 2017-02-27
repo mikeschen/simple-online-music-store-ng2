@@ -16,12 +16,7 @@
         <input #newArtist>
       </div>
 
-      <div>
-        <label>Album Description:</label>
-        <br>
-        <textarea #newDescription></textarea>
-      </div>
-      <button type = "button" class = "btn btn-success" (click)="submitForm(newTitle.value, newArtist.value, newDescription.value); newTitle.value=''; newArtist.value=''; newDescription.value=''">Add</button>
+      <button type = "button" class = "btn btn-success" (click)="submitForm(newTitle.value, newArtist.value); newTitle.value=''; newArtist.value=''">Add</button>
     </div>
   </div>
 </div>

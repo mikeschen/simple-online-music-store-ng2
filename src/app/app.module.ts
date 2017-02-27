@@ -14,7 +14,6 @@ import { AlbumDetailComponent } from './album-detail/album-detail.component';
 import { AdminComponent } from './admin/admin.component';
 import { EditAlbumComponent } from './edit-album/edit-album.component';
 import { ArtistComponent } from './artist/artist.component';
-import { SearchComponent } from './search/search.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -32,8 +31,7 @@ export const firebaseConfig = {
     AlbumDetailComponent,
     AdminComponent,
     EditAlbumComponent,
-    ArtistComponent,
-    SearchComponent
+    ArtistComponent
   ],
   imports: [
     BrowserModule,

@@ -14,6 +14,8 @@ import { AlbumService } from '../album.service';
 export class ArtistComponent {
 	 searchRes: Artist[];
    albumRes: Artist[];
+   hideSearch: boolean;
+   hideAlbum: boolean;
 
   constructor(private spotify: Spotify, private albumService: AlbumService) { }
 
@@ -22,6 +24,8 @@ export class ArtistComponent {
   	 .subscribe(res => {
      		this.searchRes = res.artists.items;
      })
+     this.hideSearch = false;
+     this.hideAlbum = true;
   }
 
   getArtistById(id: string) {
@@ -29,10 +33,12 @@ export class ArtistComponent {
       .subscribe(res => {
         this.albumRes = res.items;
       })
+    this.hideSearch = true;
+    this.hideAlbum = false;
   }
 
-  submitArtist(title: string, artist: string, description: string) {
-    var newAlbum: Album = new Album(title, artist, description);
+  submitArtist(title: string, artist: string) {
+    var newAlbum: Album = new Album(title, artist);
     console.log(newAlbum);
     this.albumService.addAlbum(newAlbum);
   }

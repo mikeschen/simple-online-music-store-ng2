@@ -6,19 +6,18 @@
         <div>
         <label>Artist Name:</label>
         <br>
-        <input #newName>
+        <input #newName type="text" placeholder="Search" (keyup.enter)="searchArtist(newName.value)">
         </div>
-        <button class = "btn btn-warning" (click)="searchArtist(newName.value)">Find</button>
     </div>
 </div>
 
-<div *ngIf="searchRes">
 <!--     {{getArtistById(searchRes[0].id)}} -->
+<div [hidden] = "hideSearch">
     <div *ngFor="let res of searchRes">  
         <div class="row">
             <div class="col-md-12">
                 <div class="search-res well">
-                    <h4><a (click)="submitArtist(res.name, res.name, res.name)">{{res.name}}</a></h4>
+                    <h4>{{res.name}}</h4>
                     <div>
                         <strong>Genres: </strong>
                         <span *ngFor="let genre of res.genres">{{genre}} </span>
@@ -29,12 +28,12 @@
         </div>
     </div>
 </div>
-<div *ngIf="albumRes">
+<div [hidden] = "hideAlbum">
     <div *ngFor="let res of albumRes">
         <div class="row">
             <div class="col-md-12">
                 <div class="search-res well">
-                    <strong>{{res.name}}</strong>
+                    <strong><a routerLink="../marketplace" (click)="submitArtist(res.name, res.artists[0].name)">{{res.name}}</a></strong>
                 </div>
             </div>
         </div>

@@ -13,8 +13,8 @@ export class AdminComponent{
 
   constructor(private albumService: AlbumService) { }
 
-    submitForm(title: string, artist: string, description: string) {
-    var newAlbum: Album = new Album(title, artist, description);
+    submitForm(title: string, artist: string) {
+    var newAlbum: Album = new Album(title, artist);
     console.log("newz albumz", newAlbum);
     this.albumService.addAlbum(newAlbum);
   }

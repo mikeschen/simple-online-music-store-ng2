@@ -10,7 +10,7 @@ import { ArtistComponent } from './artist/artist.component';
 const appRoutes: Routes = [
 	{
 		path: '',
-		component: WelcomeComponent
+		component: ArtistComponent
 	},
 	{
 		path: 'about',

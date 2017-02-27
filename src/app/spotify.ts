@@ -20,6 +20,7 @@ export class Spotify {
 	
 	public getArtistById (id) {
 		this.getArtistAlbums = 'https://api.spotify.com/v1/artists/' + id + '/albums';
+		// 4Z8W4fKeB5YxbusRsdQVPb
 		console.log(this.getArtistAlbums);
 		return this._http.get(this.getArtistAlbums)
 			.map(response => response.json())
