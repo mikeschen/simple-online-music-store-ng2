@@ -5,14 +5,27 @@ $lightgray: #efefef;
 $purple: #7c25f8;
 $black: #232323;
 $white: #ffffff;
-$green: #4e9583;
+$green: #9bf0e1;
 
 html {
 	background: url(ana.jpg) no-repeat center center fixed; 
   background-size: cover;
   h1 {
-    color: $purple;
+    color: $white;
   }
+  h2 {
+    color: $green;
+  }
+  p {
+    color: $white;
+  }
+}
+
+.container {
+  background-color: #2d2d2d;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
 }
 
 .panel {
