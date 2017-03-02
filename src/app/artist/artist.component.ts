@@ -37,8 +37,9 @@ export class ArtistComponent {
     this.hideAlbum = false;
   }
 
-  submitArtist(title: string, artist: string) {
-    var newAlbum: Album = new Album(title, artist);
+  submitArtist(title: string, artist: string, image: string, timestamp: string) {
+    var timestamp = new Date().toString();
+    var newAlbum: Album = new Album(title, artist, image, timestamp);
     console.log(newAlbum);
     this.albumService.addAlbum(newAlbum);
   }

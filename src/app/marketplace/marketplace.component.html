@@ -1,8 +1,9 @@
 <h2>My Favorites</h2>
 <div *ngFor="let album of albums | async" class="panel panel-default">
 	<div class="panel-body">
-		<h3 (click)="goToDetailPage(album)"><em>{{album.title}}</em> by {{album.artist}}</h3>
+		<h3 (click)="goToDetailPage(album)"><img class="coverart" src="{{album.image}}" alt="{{album.title}} Image"><em>{{album.title}}</em> by {{album.artist}}</h3>
 		{{album.description}}
+		Added On : {{album.timestamp | date: 'dd/MM/yyyy'}}
 		<div *ngIf="currentRoute === '/admin'">
 			<hr>
 		<app-edit-album [selectedAlbum]="album"></app-edit-album>

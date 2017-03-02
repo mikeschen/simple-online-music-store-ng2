@@ -16,7 +16,13 @@
         <input #newArtist>
       </div>
 
-      <button type = "button" class = "btn btn-success" (click)="submitForm(newTitle.value, newArtist.value); newTitle.value=''; newArtist.value=''">Add</button>
+      <div>
+        <label>Album Image:</label>
+        <br>
+        <input #newImage>
+      </div>
+
+      <a routerLink="../marketplace"><button type = "button" class = "btn btn-success" (click)="submitForm(newTitle.value, newArtist.value, newImage.value); newTitle.value=''; newArtist.value=''; newImage.value=''">Add</button></a>
     </div>
   </div>
 </div>

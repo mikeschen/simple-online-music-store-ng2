@@ -8,5 +8,9 @@
 <input [(ngModel)]="selectedAlbum.artist">
 <br>
 
-<a routerLink="../marketplace"><button type="button" class="btn btn-warning" (click)="beginUpdatingAlbum(selectedAlbum)">Update</button></a>
+<label>New Album Image:</label>
+<input [(ngModel)]="selectedAlbum.image">
+<br>
+
+<button [routerLink]="['../marketplace']" type="button" class="btn btn-warning" (click)="beginUpdatingAlbum(selectedAlbum)">Update</button>
 <button type="button" class="btn btn-danger" (click)="beginDeletingAlbum(selectedAlbum)">Delete</button>

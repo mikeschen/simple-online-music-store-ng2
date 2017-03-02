@@ -41,6 +41,13 @@ html {
   background: linear-gradient(to bottom right, $pink, $darkpurple); /* Standard syntax */
 }
 
+img.coverart {
+  font-size: 12px;
+  height: 60px;
+  width: 60px;
+  margin-right: 20px;
+}
+
 input {
   color: $black !important;
 }
