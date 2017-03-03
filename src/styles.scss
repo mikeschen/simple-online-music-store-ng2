@@ -6,29 +6,34 @@ $purple: #7c25f8;
 $black: #232323;
 $white: #ffffff;
 $green: #9bf0e1;
+$orange: #df691a;
+$darkgray: #2b3e4f;
+$dimgray: #4d5d6c;
 
 html * {
   font-family: 'Montserrat', sans-serif;
 }
 
 html {
-  // font-family: 'Montserrat', sans-serif;
-
 	background: url(ana.jpg) no-repeat center center fixed; 
   background-size: cover;
   h1 {
-    color: $white;
+    color: $orange;
   }
   h2 {
-    color: $green;
+    color: $white;
   }
   p {
     color: $white;
   }
 }
 
-body {
-  font-family: 'Diplomata SC', cursive;
+.band {
+  color: $green;
+}
+
+.outside {
+    background-color: $darkgray;
 }
 
 .clear { 
@@ -36,7 +41,8 @@ body {
 }
 
 .container {
-  background-color: #2d2d2d;
+    background-color: $dimgray;
+  // background-color: #2d2d2d;
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
