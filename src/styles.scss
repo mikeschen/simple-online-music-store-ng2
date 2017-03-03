@@ -7,7 +7,13 @@ $black: #232323;
 $white: #ffffff;
 $green: #9bf0e1;
 
+html * {
+  font-family: 'Montserrat', sans-serif;
+}
+
 html {
+  // font-family: 'Montserrat', sans-serif;
+
 	background: url(ana.jpg) no-repeat center center fixed; 
   background-size: cover;
   h1 {
@@ -19,6 +25,10 @@ html {
   p {
     color: $white;
   }
+}
+
+body {
+  font-family: 'Diplomata SC', cursive;
 }
 
 .clear { 

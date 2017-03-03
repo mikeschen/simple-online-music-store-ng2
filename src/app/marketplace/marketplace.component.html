@@ -3,7 +3,7 @@
 	<div class="panel-body">
 		<h3 (click)="goToDetailPage(album)"><img class="coverart" src="{{album.image}}" alt="{{album.title}} Image"><em>{{album.title}}</em> by {{album.artist}}</h3>
 		{{album.description}}
-		Added On : {{album.timestamp | date: 'dd/MM/yyyy'}}
+		Added On : {{album.timestamp | date: 'MM/dd/yyyy'}}
 		<div *ngIf="currentRoute === '/admin'">
 			<hr>
 		<app-edit-album [selectedAlbum]="album"></app-edit-album>
