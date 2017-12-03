@@ -22,7 +22,7 @@ export class ArtistComponent {
   searchArtist(url: string) {
   	this.spotify.searchArtist(url)
   	 .subscribe(res => {
-     		this.searchRes = res.artists.items;
+  	   this.searchRes = res.artists.items;
      })
      this.hideSearch = false;
      this.hideAlbum = true;
